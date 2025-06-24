@@ -7,7 +7,7 @@ import { UpdateLeadDto } from './dto/update-lead.dto';
 
 import { Lead } from './entities/lead.entity';
 
-import { FindAll } from 'types/global';
+import { FindAll } from '../../types/global';
 
 @Injectable()
 export class LeadService {

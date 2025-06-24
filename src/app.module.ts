@@ -22,7 +22,7 @@ import { LeadModule } from './lead/lead.module';
         username: configService.get<string>('POSTGRES_USER'),
         password: configService.get<string>('POSTGRES_PASSWORD'),
         database: configService.get<string>('POSTGRES_DB'),
-        synchronize: true,
+        synchronize: false,
         logging: true,
         ssl: {
           rejectUnauthorized: false,

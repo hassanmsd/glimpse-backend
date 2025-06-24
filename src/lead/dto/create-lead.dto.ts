@@ -6,7 +6,7 @@ import {
   IsString,
 } from 'class-validator';
 
-import { INTEREST_LEVEL, SALE_STATUS, SOURCE } from 'types/global';
+import { INTEREST_LEVEL, SALE_STATUS, SOURCE } from '../../../types/global';
 
 export class CreateLeadDto {
   @IsNumber()

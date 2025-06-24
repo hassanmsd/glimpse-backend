@@ -1,12 +1,16 @@
-import { Column, Entity, PrimaryColumn } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { IsEmail } from 'class-validator';
 
-import { INTEREST_LEVEL, SALE_STATUS, SOURCE } from 'types/global';
+import { INTEREST_LEVEL, SALE_STATUS, SOURCE } from '../../../types/global';
 
 @Entity()
 export class Lead {
   // Unique primary key for each lead record (custom lead ID)
-  @PrimaryColumn({ type: 'varchar', length: 30, unique: true })
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  // leadId for each lead
+  @Column({ type: 'int' })
   leadID: number;
 
   // Name of the lead
